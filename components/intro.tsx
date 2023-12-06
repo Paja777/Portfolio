@@ -9,10 +9,12 @@ import { FaGithubSquare } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 import image1 from "@/public/IMG_3010.jpg";
 import useSectionInView from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
   
-  const {ref} = useSectionInView('Home', 0.5)
+  const {ref} = useSectionInView('Home', 0.5);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
  
   return (
     <section ref={ref} className="mb-28 max-w-[50rem] rext-center sm:mb-0 scroll-mt-28" id="home">
@@ -74,13 +76,17 @@ export default function Intro() {
           className="bg-gray-900 group text-white px-7 py-3 items-center flex gap-2 rounded-full 
           focus:scale-110 outline-none hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
           href="#contact"
+          onClick={() =>{
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Contact me here{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
         <a
           className="bg-white group px-7 py-3 items-center flex gap-2 rounded-full focus:scale-110 outline-none
-         hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10"
+         hover:scale-110 active:scale-105 transition cursor-pointer borderBlack"
           href="/CV.pdf"
         >
           Download CV{" "}
@@ -88,7 +94,7 @@ export default function Intro() {
         </a>
         <a
           className="bg-white text-gray-700 p-4 flex items-center rounded-full gap-2 
-          focus:scale-110 outline-none hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10"
+          focus:scale-110 outline-none hover:scale-110 active:scale-105 transition cursor-pointer borderborderBlack"
           href="https://linkedin.com" target="_blank"
         >
           <BsLinkedin />
