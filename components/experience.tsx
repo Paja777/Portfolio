@@ -7,27 +7,51 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { experiencesData } from "@/lib/data";
+import { experiencesData } from "@/lib/data"; 
+import { useTheme } from "@/context/theme-context";
+import useSectionInView from "@/lib/hooks";
 
 export default function Experience() {
+  const { ref } = useSectionInView("Experience");
+  const { theme } = useTheme();
+
   return (
-    <section id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
+    <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>My experience</SectionHeading>
       <VerticalTimeline lineColor="">
-      <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-    contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-    date="2011 - present"
-    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-    icon={experiencesData[0].icon}
-  >
-    <h3 className="vertical-timeline-element-title">Creative Director</h3>
-    <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-    <p>
-      Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-    </p>
-  </VerticalTimelineElement>
+        {experiencesData.map((item, index) => (
+          <React.Fragment key={index}>
+            <VerticalTimelineElement
+              contentStyle={{
+                background:
+                  theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
+                boxShadow: "none",
+                border: "1px solid rgba(0, 0, 0, 0.05)",
+                textAlign: "left",
+                padding: "1.3rem 2rem",
+              }}
+              contentArrowStyle={{
+                borderRight:
+                  theme === "light"
+                    ? "0.4rem solid #9ca3af"
+                    : "0.4rem solid rgba(255, 255, 255, 0.5)",
+              }}
+              date={item.date}
+              icon={item.icon}
+              iconStyle={{
+                background:
+                  theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
+                fontSize: "1.5rem",
+              }}
+            >
+              <h3 className="font-semibold capitalize">{item.title}</h3>
+              <p className="font-normal !mt-0">{item.location}</p>
+              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+                {item.description}
+              </p>
+            </VerticalTimelineElement>
+          </React.Fragment>
+        ))}
       </VerticalTimeline>
     </section>
   );
