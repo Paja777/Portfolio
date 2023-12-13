@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import FHImg from "@/public/FH.png";
+import LiveResultImg from "@/public/LR.png";
+import YTImg from "@/public/YT.png";
 
 export const links = [
   {
@@ -58,25 +58,25 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "FindHandyman app",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "App that connects users in need of handyman services with skilled professionals.",
+    tags: ["React", "TypeScript", "Redux", "MaterialUi"],
+    imageUrl: FHImg,
   },
   {
-    title: "rmtDev",
+    title: "LiveResults app",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "Tennis live results app, real-time match tracking and display of live tennis results.",
+    tags: ["React", "TypeScript", "MaterialUi", "Redux"],
+    imageUrl: LiveResultImg,
   },
   {
-    title: "Word Analytics",
+    title: "Youtube clone",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "Streaming platform similar to youtube.",
+    tags: ["React", "CSS"],
+    imageUrl: YTImg,
   },
 ] as const;
 
@@ -91,4 +91,5 @@ export const skillsData = [
   "Tailwind",
   "Redux",
   "Framer Motion",
+  "MaterialUi",
 ] as const;
