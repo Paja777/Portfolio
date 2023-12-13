@@ -7,12 +7,14 @@ import SectionDevider from "@/components/section-devider";
 import Skills from "@/components/skills";
 
 export default function Home() {
-  return <main className="flex flex-col items-center">
-    <Intro />
-    <SectionDevider />
-    <About />
-    <Projects />
-    <Skills />
-    <Contact />
-  </main>; 
+  return (
+    <main className="flex flex-col items-center">
+      <Intro />
+      <SectionDevider />
+      <About />
+      <Projects />
+      <Skills />
+      <Contact />
+    </main>
+  );
 }
