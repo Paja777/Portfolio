@@ -7,7 +7,7 @@ import React from "react";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
-import image1 from "@/public/IMG_3010.jpg";
+import image1 from "@/public/IMGME.jpg";
 import useSectionInView from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
