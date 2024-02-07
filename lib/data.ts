@@ -5,6 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import FHImg from "@/public/FH.png";
 import LiveResultImg from "@/public/LR.png";
 import YTImg from "@/public/YT.png";
+import comicStore from '@/public/ComicStore.png'
 
 export const links = [
   {
@@ -65,19 +66,12 @@ export const projectsData = [
     imageUrl: FHImg,
   },
   {
-    title: "LiveResults app",
-    description:
-      "Tennis live results app, real-time match tracking and display of live tennis results.",
+    title: "ComicBook Store",
+    description: "E-commerce platform specializing in the sale of comic books, graphic novels, and related merchandise.",
     tags: ["React", "TypeScript", "MaterialUi", "Redux"],
-    imageUrl: LiveResultImg,
-  },
-  {
-    title: "Youtube clone",
-    description:
-      "Streaming platform similar to youtube.",
-    tags: ["React", "CSS"],
-    imageUrl: YTImg,
-  },
+    imageUrl: comicStore,
+  }
+  
 ] as const;
 
 export const skillsData = [
