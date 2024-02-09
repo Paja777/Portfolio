@@ -68,7 +68,7 @@ export const projectsData = [
   {
     title: "ComicBook Store",
     description: "E-commerce platform specializing in the sale of comic books, graphic novels, and related merchandise.",
-    tags: ["React", "TypeScript", "Jest", "Tailwind", "Redux", "ContexApi", "Auth0"],
+    tags: ["React", "TypeScript", "Jest", "Tailwind", "Redux", "Mui", "ContexApi", "Auth0"],
     imageUrl: comicStore,
   }
   
