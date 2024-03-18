@@ -13,7 +13,10 @@ export default function Project({
   tags,
   imageUrl,
 }: ProjectProps) {
-  console.log(title);
+  const gitlink = title.includes("Find")
+    ? "https://github.com/Paja777/FindHandyman/tree/main/client"
+    : "https://github.com/Paja777/CommicsStore";
+ 
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -54,7 +57,7 @@ export default function Project({
             ))}
           </ul>
         </div>
-        <a href="https://github.com/Paja777/FindHandyman/tree/main/client">
+        <a href={gitlink}>
           <Image
             className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl 
         transition group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2
