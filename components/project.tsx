@@ -2,7 +2,7 @@
 
 import { projectsData } from "@/lib/data";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image"; 
+import Image from "next/image";
 import { useRef } from "react";
 
 type ProjectProps = (typeof projectsData)[number];
@@ -13,6 +13,7 @@ export default function Project({
   tags,
   imageUrl,
 }: ProjectProps) {
+  console.log(title);
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -38,7 +39,9 @@ export default function Project({
        hover:bg-gray-200 transition "
         >
           <h3>{title}</h3>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">{description}</p>
+          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
+            {description}
+          </p>
 
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
@@ -51,15 +54,17 @@ export default function Project({
             ))}
           </ul>
         </div>
-        <Image
-          className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl 
+        <a href="/Resume.pdfhttps://github.com/Paja777/FindHandyman/tree/main/client">
+          <Image
+            className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl 
         transition group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2
         group-hover:scale-[1.04]  group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 
         group-even:group-hover:rotate-2 group-even:right-[initial] group-even:-left-40"
-          src={imageUrl}
-          alt="Project I work on"
-          quality={95}
-        />
+            src={imageUrl}
+            alt="Project I work on"
+            quality={95}
+          />
+        </a>
       </section>
     </motion.div>
   );
