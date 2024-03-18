@@ -5,7 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import FHImg from "@/public/FH.png";
 import LiveResultImg from "@/public/LR.png";
 import YTImg from "@/public/YT.png";
-import comicStore from '@/public/ComicStore.png'
+import comicStore from "@/public/ComicStore.png";
 
 export const links = [
   {
@@ -62,16 +62,33 @@ export const projectsData = [
     title: "FindHandyman app",
     description:
       "App that connects users in need of handyman services with skilled professionals.",
-    tags: ["React", "TypeScript", "Redux", "MaterialUi"],
+    tags: [
+      "React",
+      "TypeScript",
+      "NodeJs",
+      "ExpressJs",
+      "Jest",
+      "Redux",
+      "MaterialUi",
+    ],
     imageUrl: FHImg,
   },
   {
     title: "ComicBook Store",
-    description: "E-commerce platform specializing in the sale of comic books, graphic novels, and related merchandise.",
-    tags: ["React", "TypeScript", "Jest", "Tailwind", "Redux", "Mui", "ContexApi", "Auth0"],
+    description:
+      "E-commerce platform specializing in the sale of comic books, graphic novels, and related merchandise.",
+    tags: [
+      "React",
+      "TypeScript",
+      "NodeJs",
+      "ExpressJs",
+      "Jest",
+      "Tailwind",
+      "Redux",
+      "Mui",
+    ],
     imageUrl: comicStore,
-  }
-  
+  },
 ] as const;
 
 export const skillsData = [
