@@ -14,7 +14,7 @@ export default function Project({
   imageUrl,
 }: ProjectProps) {
   const gitlink = title.includes("Find")
-    ? "https://github.com/Paja777/FindHandyman/tree/main/client"
+    ? "https://find-handyman.onrender.com/"
     : "https://github.com/Paja777/ComicBook-Store";
  
   const ref = useRef<HTMLDivElement>(null);
