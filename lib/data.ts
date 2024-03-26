@@ -59,21 +59,6 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "FindHandyman app",
-    description:
-      "App that connects users in need of handyman services with skilled professionals.",
-    tags: [
-      "React",
-      "TypeScript",
-      "NodeJs",
-      "ExpressJs",
-      "Jest",
-      "Redux",
-      "MaterialUi",
-    ],
-    imageUrl: FHImg,
-  },
-  {
     title: "ComicBook Store",
     description:
       "E-commerce platform specializing in the sale of comic books, graphic novels, and related merchandise.",
@@ -89,6 +74,22 @@ export const projectsData = [
     ],
     imageUrl: comicStore,
   },
+  {
+    title: "FindHandyman app",
+    description:
+      "App that connects users in need of handyman services with skilled professionals.",
+    tags: [
+      "React",
+      "TypeScript",
+      "NodeJs",
+      "ExpressJs",
+      "Jest",
+      "Redux",
+      "MaterialUi",
+    ],
+    imageUrl: FHImg,
+  },
+  
 ] as const;
 
 export const skillsData = [
