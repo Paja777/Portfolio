@@ -15,7 +15,7 @@ export default function Project({
 }: ProjectProps) {
   const gitlink = title.includes("Find")
     ? "https://github.com/Paja777/FindHandyman"
-    : "https://comicbook-store-gxha.onrender.com/";
+    : "https://comicbook-store-gxha.onrender.com";
  
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
