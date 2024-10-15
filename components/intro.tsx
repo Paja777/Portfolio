@@ -7,7 +7,7 @@ import React from "react";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
-import image1 from "@/public/IMG_3010.jpg";
+import image1 from "@/public/Novaslika.jpg";
 import useSectionInView from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { FaReact } from "react-icons/fa";
@@ -65,11 +65,11 @@ export default function Intro() {
         <span className="font-bold">Hello, I'm Pavle.</span> I'm a{" "}
         <span className="font-bold">software developer</span> I enjoy building{" "}
         <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">
-          <FaReact className="inline text-[1.25rem] mr-1" />
+        <span className="underline inline-flex items-center">
+          <FaReact className="inline text-[4rem] mr-1" style={{ color: '#61DAFB' }}/>
           React (Next.js){" "}
         </span>
-        .
+        
       </motion.h1>
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
