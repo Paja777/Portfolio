@@ -10,6 +10,7 @@ import { HiDownload } from "react-icons/hi";
 import image1 from "@/public/IMG_3010.jpg";
 import useSectionInView from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { FaReact } from "react-icons/fa";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -62,9 +63,13 @@ export default function Intro() {
         animate={{ y: 0, opacity: 1 }}
       >
         <span className="font-bold">Hello, I'm Pavle.</span> I'm a{" "}
-        <span className="font-bold">software developer</span> I enjoy
-        building <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">React (Next.js) and Node js</span>.
+        <span className="font-bold">software developer</span> I enjoy building{" "}
+        <span className="italic">sites & apps</span>. My focus is{" "}
+        <span className="underline">
+          <FaReact className="inline text-[1.25rem] mr-1" />
+          React (Next.js){" "}
+        </span>
+        .
       </motion.h1>
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
