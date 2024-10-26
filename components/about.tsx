@@ -31,10 +31,7 @@ export default function About() {
         <span className="italic">Programming is my passion</span> 💻. The thrill
         of solving complex problems is what drives me 🔍, and I{" "}
         <span className="underline">love</span> the satisfaction of finding the
-        perfect solution 🎯. Always eager to learn new technologies 🚀, I’m
-        currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a full stack
-        developer 👨‍💻.
+        perfect solution 🎯. Always eager to imporove my knowledge 🚀. 
       </p>
     </motion.section>
   );
